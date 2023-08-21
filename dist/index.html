@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>giardDesign-MateuszMiszczak-adRespect-2023</title>
+  </head>
+  <body class="relative flex flex-col w-full bg-grayCustom text-blackText">
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    NAVIGATION
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <main>
+      <nav
+        class="sticky top-0 z-40 flex flex-row items-center justify-between w-full px-10 mx-auto font-inter p-navPaddingXs lg:px-20 xl:px-24 bg-grayCustom"
+        id="navBar"
+      >
+        <a href="#" class="place-self-center" id="logoLink">
+          <img src="../assets/imgs/navigation/navBarLogo.svg" alt="Logo" />
+        </a>
+
+        <div class="relative block md:hidden">
+          <div>
+            <img
+              src="../assets/icons/iconHamburger.svg"
+              alt="Hamburger icon"
+              class="block transition-opacity duration-300 ease-in-out icon"
+              id="hamburgerClosed"
+            />
+            <img
+              src="../assets/icons/close.svg"
+              alt="Close icon"
+              class="hidden icon"
+              id="hamburgerOpened"
+            />
+          </div>
+        </div>
+
+        <div
+          class="flex-col items-start gap-2 text-blackText text-xl sm:text-3xl hidden md:hidden mobile-nav-bar absolute top-[69.5px] right-0 bg-grayCustom p-6 xs:p-12 sm:p-20 sm:gap-8 rounded-lg shadow-lg shadow-gray-400"
+        >
+          <div class="relative">
+            <button
+              type="button"
+              class="flex items-center gap-[5px] cursor-pointer"
+              id="groupElement"
+            >
+              <p>Oferta</p>
+              <img src="../assets/icons/arrowDown.svg" alt="Arrow down" />
+            </button>
+            <ul
+              class="absolute w-24 sm:w-36 sm:-top-[79.5px] sm:-left-[225.125px] invisible -left-[121.5px] -top-6 xs:top-[-47.5px] xs:-left-[145.125px] p-4 bg-grayCustom flex flex-col gap-0.5 items-center justify-center rounded-lg shadow-lg shadow-gray-300 text-blackText"
+              id="menu"
+            >
+              <li class="py-0.5 px-4">
+                <a
+                  href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                  target="_blank"
+                >
+                  <span class="border-b-[2px] hover:border-blackText"
+                    >Hire</span
+                  >
+                </a>
+              </li>
+              <li class="py-0.5 px-4">
+                <a href="https://github.com/MateuszMiszczak" target="_blank">
+                  <span class="border-b-[2px] hover:border-blackText">Me</span>
+                </a>
+              </li>
+              <li class="py-0.5 px-4">
+                <a
+                  href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                  target="_blank"
+                >
+                  <span class="border-b-[2px] hover:border-blackText"
+                    >Please</span
+                  >
+                </a>
+              </li>
+              <li class="py-0.5 px-4">
+                <a href="https://adrespect.pl/" target="_blank">
+                  <span class="border-b-[2px] hover:border-blackText">
+                    <img
+                      src="../assets/icons/heart.png"
+                      class="animate-pulseHeart"
+                    />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a
+            href="https://adrespect.pl/o-nas/"
+            target="_blank"
+            class="relative inline-block transition-all duration-100 before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:bg-gradient-to-r before:from-white before:to-lime-600 before:opacity-0 before:transition-all before:duration-100 before:content-[''] hover:text-green hover:before:w-full hover:before:opacity-100"
+            >O firmie</a
+          >
+          <a
+            href="https://adrespect.pl/realizacje/"
+            target="_blank"
+            class="relative inline-block transition-all duration-100 before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:bg-gradient-to-r before:from-white before:to-lime-600 before:opacity-0 before:transition-all before:duration-100 before:content-[''] hover:text-green hover:before:w-full hover:before:opacity-100"
+            >Realizacje</a
+          >
+          <a
+            href="https://adrespect.pl/kontakt/#dzial"
+            target="_blank"
+            class="relative inline-block transition-all duration-100 before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:bg-gradient-to-r before:from-white before:to-lime-600 before:opacity-0 before:transition-all before:duration-100 before:content-[''] hover:text-green hover:before:w-full hover:before:opacity-100"
+            >Kontakt</a
+          >
+          <div
+            class="relative max-w-md mx-auto bg-transparent rounded-2xl sm:mx-auto sm:max-w-lg"
+          >
+            <form action="" class="mx-auto w-max">
+              <input
+                type="search"
+                class="cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent pl-12 outline-none focus:w-60 focus:cursor-text focus:border-lime-600 focus:pl-16 focus:pr-4 peer transition-all delay-[10ms]"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent px-3.5 peer-focus:border-green peer-focus:stroke-green peer-focus:scale-75 peer-hover:scale-95 stroke-blackText peer-hover:stroke-green transition delay-[10ms]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </form>
+          </div>
+        </div>
+
+        <!--DESKTOP NAVBAR-->
+
+        <div class="hidden md:block">
+          <div class="flex items-center gap-12 text-sm text-blackText">
+            <div class="relative desktop-group-element">
+              <button
+                type="button"
+                class="flex items-center gap-[5px] cursor-pointer hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-lime-500 hover:to-green hover:transition-all hover:delay-[50ms]"
+              >
+                <p class="">Oferta</p>
+                <img
+                  src="../assets/icons/arrowDown.svg"
+                  alt="Arrow down"
+                  class="desktop-arrow-icon"
+                />
+              </button>
+              <ul
+                class="absolute left-0 flex flex-col invisible w-24 px-6 rounded-lg shadow-md top-[54px] md:w-36 lg:text-lg bg-grayCustom shadow-gray-300 desktop-menu"
+              >
+                <li class="py-0.5 px-4">
+                  <a
+                    href="https://github.com/MateuszMiszczak"
+                    target="_blank"
+                    class="text-blackText hover:opacity-75"
+                  >
+                    <span class="border-b-[2px] hover:border-blackText"
+                      >Teach</span
+                    >
+                  </a>
+                </li>
+                <li class="py-0.5 px-4">
+                  <a
+                    href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                    target="_blank"
+                    class="text-blackText hover:opacity-75"
+                  >
+                    <span class="border-b-[2px] hover:border-blackText"
+                      >Me</span
+                    >
+                  </a>
+                </li>
+                <li class="py-0.5 px-4">
+                  <a
+                    href="https://github.com/MateuszMiszczak"
+                    target="_blank"
+                    class="text-blackText hover:opacity-75"
+                  >
+                    <span class="border-b-[2px] hover:border-blackText"
+                      >Please</span
+                    >
+                  </a>
+                </li>
+                <li class="py-0.5 px-4">
+                  <a href="https://adrespect.pl/" target="_blank">
+                    <span class="border-b-[2px] hover:border-blackText">
+                      <img
+                        src="../assets/icons/heart.png"
+                        class="animate-pulseHeart"
+                      />
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://adrespect.pl/o-nas/"
+              target="_blank"
+              class="relative inline-block transition-all duration-100 before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:bg-gradient-to-r before:from-white before:to-lime-600 before:opacity-0 before:transition-all before:duration-100 before:content-[''] hover:text-green hover:before:w-full hover:before:opacity-100"
+              >O firmie</a
+            >
+            <a
+              href="https://adrespect.pl/realizacje/"
+              target="_blank"
+              class="relative inline-block transition-all duration-100 before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:bg-gradient-to-r before:from-white before:to-lime-600 before:opacity-0 before:transition-all before:duration-100 before:content-[''] hover:text-green hover:before:w-full hover:before:opacity-100"
+              >Realizacje</a
+            >
+            <a
+              href="https://adrespect.pl/kontakt/#dzial"
+              target="_blank"
+              class="relative inline-block transition-all duration-100 before:absolute before:-bottom-0.5 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:bg-gradient-to-r before:from-white before:to-lime-600 before:opacity-0 before:transition-all before:duration-100 before:content-[''] hover:text-green hover:before:w-full hover:before:opacity-100"
+              >Kontakt</a
+            >
+            <div
+              class="relative max-w-md mx-auto bg-transparent rounded-2xl sm:mx-auto sm:max-w-lg"
+            >
+              <form action="" class="mx-auto w-max">
+                <input
+                  type="search"
+                  class="cursor-pointer relative z-10 h-12 w-12 rounded-full border border-grayCustom bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-lime-600 focus:pl-16 focus:pr-4 peer transition-all delay-[10ms] hover:border-lime-500"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent px-3.5 peer-focus:border-green peer-focus:stroke-green peer-focus:scale-75 peer-hover:scale-95 stroke-blackText peer-hover:stroke-green transition delay-[10ms]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    INTRO
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+      <section class="relative pt-10 overflow-x-hidden bg-beige lg:pt-0">
+        <div
+          class="flex flex-col items-center gap-4 text-center lg:flex-row lg:ml-16 xl:ml-0 lg:text-start sm:gap-6 md:gap-10 lg:gap-12 xl:gap-16"
+        >
+          <!-- FIRST INTRO SIDE -->
+          <div class="flex flex-col items-center basis-1/2">
+            <div
+              class="flex flex-col items-center gap-6 lg:items-start sm:gap-8 lg:gap-xl md:gap-10"
+            >
+              <div
+                class="flex flex-col items-center gap-4 lg:items-start lg:gap-11 w-[496.81px]"
+              >
+                <h1
+                  class="text-3xl leading-8 font-montserrat sm:text-4xl md:text-5xl lg:text-6xl sm:leading-10 lg:leading-largeBig"
+                  id="h1"
+                >
+                  Nowoczesna
+                  <span class="xl:block">aranżacja</span>
+                  <span class="block">Twojego ogrodu</span>
+                </h1>
+                <p
+                  class="text-xs leading-4 w-contentHeroFirstParagraph sm:leading-6 xs:text-sm sm:text-base"
+                  id="pMain"
+                >
+                  <span class="block md:contents"
+                    >Marka GiardDesign to wieloletnie doświadczenie</span
+                  >
+                  i wysoka estetyka realizacji.
+                  <span class="block md:inline"
+                    >Oferujemy kompleksowy zakres usług</span
+                  >
+                  <span class="block md:content"
+                    >z indywidualnym podejściem do każdego projektu.</span
+                  >
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center gap-4 sm:flex-row md:items-start sm:gap-7 md:gap-9"
+              >
+                <button
+                  class="leading-6 transition-all delay-[10ms] rounded-full p-buttonHeroGreen bg-green text-grayCustom active:scale-95 hover:bg-lighterGreen"
+                  id="contactMainBtn"
+                >
+                  Skontaktuj się z nami
+                </button>
+                <button
+                  class="flex items-center gap-2 transition-all rounded-full active:scale-95 hover:bg-beigeLighter p-buttonHeroSecondary text-green border-one border-green"
+                  id="seeWhatWeDoMainBtn"
+                >
+                  <p>Zobacz nasze realizacje</p>
+                  <img src="../assets/icons/vector.svg" alt="Vector" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECOND INTRO SIDE -->
+          <div class="relative xl:h-[737px] xl:w-[688px] xl:ml-auto">
+            <ul id="slider">
+              <li
+                class="h-[50vh] md:h-[75vh] xl:h-[737px] xl:w-[688px] rounded-lg lg:rounded-none"
+              >
+                <img
+                  src="../assets/imgs/intro/img1.jpg"
+                  alt="Intro img"
+                  class="object-cover w-full h-full"
+                />
+              </li>
+              <li
+                class="h-[50vh] md:h-[75vh] xl:h-[737px] xl:w-[688px] rounded-lg lg:rounded-none"
+              >
+                <img
+                  src="../assets/imgs/intro/img2.jpg"
+                  alt="Intro img"
+                  class="object-cover w-full h-full"
+                />
+              </li>
+              <li
+                class="h-[50vh] md:h-[75vh] xl:h-[737px] xl:w-[688px] rounded-lg lg:rounded-none"
+              >
+                <img
+                  src="../assets/imgs/intro/img3.jpg"
+                  alt="Intro img"
+                  class="object-cover w-full h-full"
+                />
+              </li>
+            </ul>
+            <div class="absolute bottom-0 right-0">
+              <div
+                class="flex justify-end gap-3 px-8 py-6 bg-transparent sm:gap-4 lg:gap-0 lg:bg-grayCustom"
+              >
+                <button
+                  onclick="prev()"
+                  class="flex items-center justify-center w-12 h-12 transition-all rounded-lg bg-whiteCustom lg:bg-grayCustom lg:rounded-none hover:scale-105 active:scale-95"
+                >
+                  <img src="../assets/icons/arrowLeft.svg" alt="Arrow left" />
+                </button>
+                <button
+                  onclick="next()"
+                  class="flex items-center justify-center w-12 h-12 transition-all rounded-lg bg-whiteCustom lg:bg-grayCustom lg:rounded-none hover:scale-105 active:scale-95"
+                >
+                  <img src="../assets/icons/arrowRight.svg" alt="Arrow right" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    OFFER
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+      <section
+        class="flex flex-col items-center lg:gap-20 xl:gap-24 pt-big pb-large"
+      >
+        <div class="flex flex-col w-1/2 xl:w-[1040px] gap-4">
+          <a
+            href="#"
+            class="hidden text-xs text-green leading-sm tracking-xsMinus lg:block"
+            >Oferta</a
+          >
+          <div class="flex flex-col items-center lg:items-start gap-7 xl:gap-8">
+            <h2
+              class="text-2xl font-medium sm:text-3xl md:text-4xl xl:text-5xl lg:leading-bigLarge lg:tracking-mdHugeMinus"
+            >
+              Działamy
+              <span class="italic font-medium font-inter">kompleksowo</span>
+            </h2>
+            <p
+              class="xl:text-base xl:leading-6 xl:tracking-smMinus text-start sm:text-center lg:text-start"
+            >
+              Oferujemy kompletną obsługę inwestycji terenów zielonych.
+              Projektujemy nowoczesne ogrody
+              <span class="xl:block"
+                >przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt,
+                zwizualizujemy go i wcielimy</span
+              >
+              w życie, a na każdym etapie posłużymy radą i wieloletnim
+              doświadczeniem.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="grid gap-8 pt-12 xl:flex sm:grid-cols-1 md:grid-cols-2 xl:pt-0 md:px-16 lg:px-20 xl:px-med xl:gap-16"
+        >
+          <div
+            class="hover:animate-elevate w-[312px] h-[312px] xs:w-[378px] xs:h-[378px] flex flex-col py-12 px-10 gap-12 lg:gap-0 lg:justify-between items-start rounded-xs bg-white"
+          >
+            <div class="flex flex-col items-start sm:gap-6 xl:gap-8">
+              <div class="flex w-11 h-11 p-0.5 justify-center items-center">
+                <img
+                  src="../assets/icons/pen.png"
+                  alt="Pen"
+                  class="w-8 h-8 md:w-10 md:h-10"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 xl:gap-3">
+                <h2
+                  class="self-stretch text-2xl font-medium font-montserrat md:text-med leading-bigSm tracking-mdHugeMinus"
+                >
+                  Projekty
+                </h2>
+                <p class="text-sm leading-smBig tracking-ssMinus">
+                  Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+                  wykorzystaniem istniejącej przestrzeni.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://github.com/MateuszMiszczak/navencopy"
+              target="_blank"
+              class="flex items-center pb-0 border-solid gap-moreThanSm border-b-one border-green hover:animate-transfRight"
+            >
+              <p class="leading-6 text-center font-inter text-green">
+                Dowiedz się więcej
+              </p>
+              <img
+                src="../assets/icons/vector.svg"
+                alt="Vector"
+                class="-rotate-90"
+              />
+            </a>
+          </div>
+
+          <div
+            class="hover:animate-elevate w-[312px] h-[312px] xs:w-[378px] xs:h-[378px] flex flex-col py-12 px-10 gap-12 lg:gap-0 lg:justify-between items-start rounded-xs bg-white"
+          >
+            <div class="flex flex-col items-start sm:gap-6 xl:gap-8">
+              <div class="flex items-center justify-center w-12 h-11 p-eyeIcon">
+                <img
+                  src="../assets/icons/eye.png"
+                  alt="Eye"
+                  class="h-[24.96px] w-10 md:w-12 md:h-[28.96px]"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 xl:gap-3">
+                <h2
+                  class="self-stretch text-2xl font-medium font-montserrat md:text-med leading-bigSm tracking-mdHugeMinus"
+                >
+                  Wizualizacje
+                </h2>
+                <p class="text-sm leading-smBig tracking-ssMinus">
+                  Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
+                  spaceru animowanego w technologii 3D.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://drive.google.com/file/d/1mtcxFL4XEWK7jqlwFe6-cyY5x_18cdyp/view?usp=sharing"
+              target="_blank"
+              class="flex items-center pb-0 border-solid gap-moreThanSm border-b-one border-green hover:animate-transfRight"
+            >
+              <p class="leading-6 text-center font-inter text-green">
+                Dowiedz się więcej
+              </p>
+              <img
+                src="../assets/icons/vector.svg"
+                alt="Vector"
+                class="-rotate-90"
+              />
+            </a>
+          </div>
+
+          <div
+            class="hover:animate-elevate w-[312px] h-[312px] xs:w-[378px] xs:h-[378px] flex flex-col py-12 px-10 gap-12 lg:gap-0 lg:justify-between items-start rounded-xs bg-white"
+          >
+            <div class="flex flex-col items-start sm:gap-6 xl:gap-8">
+              <div class="flex items-center justify-center w-11 h-11">
+                <img
+                  src="../assets/icons/stars.png"
+                  alt="Stars"
+                  class="w-8 h-8 md:w-10 md:h-10"
+                />
+              </div>
+              <div class="flex flex-col items-center gap-2 xl:gap-3">
+                <h2
+                  class="self-stretch text-2xl font-medium font-montserrat md:text-med leading-bigSm tracking-mdHugeMinus"
+                >
+                  Realizacje
+                </h2>
+                <p class="text-sm leading-smBig tracking-ssMinus">
+                  Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań
+                  i zaawansowanych technologii.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://github.com/MateuszMiszczak"
+              target="_blank"
+              class="flex items-center pb-0 border-solid gap-moreThanSm border-b-one border-green hover:animate-transfRight"
+            >
+              <p class="leading-6 text-center font-inter text-green">
+                Zobacz nasze realizacje
+              </p>
+              <img
+                src="../assets/icons/vector.svg"
+                alt="Vector"
+                class="-rotate-90"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    ABOUT COMPANY
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+      <section>
+        <div
+          class="grid gap-16 overflow-x-hidden grid-col-1 lg:grid-cols-2 bg-green"
+        >
+          <div
+            class="basis-1/2 max-h-720 max-w-[688px] bg-white hidden lg:block"
+          >
+            <img
+              src="../assets/imgs/about/about.jpg"
+              alt="About img"
+              class="w-full h-full"
+            />
+          </div>
+
+          <div
+            class="flex flex-col w-[200px] mx-auto lg:mx-0 lg:w-[596px] items-center md:items-start justify-center gap-12 my-12 lg:my-0 lg:gap-xl 16 lg:ml-16 xl:ml-24"
+          >
+            <div class="flex flex-col items-start gap-[-2px] xl:gap-4">
+              <p class="text-xs text-grayCustom leading-sm tracking-xsMinus">
+                O firmie
+              </p>
+              <div class="flex flex-col items-start gap-6 xl:gap-10">
+                <h2
+                  class="text-3xl font-medium text-grayCustom font-montserrat sm:text-5xl lg:leading-bigLarge tracking-mdHugeMinus"
+                >
+                  Tworzymy
+                  <span class="block italic font-medium font-inter"
+                    >z pasją</span
+                  >
+                </h2>
+                <p
+                  class="text-base leading-6 text-grayCustom font-inter tracking-smMinus"
+                >
+                  Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                  <span class="lg:block"
+                    >wykwalifikowani projektanci oraz architekci, których
+                    zadaniem jest</span
+                  >
+                  rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                  <span class="lg:block"
+                    >specjalizacja to przestrzenie nowoczesne, które
+                    charakteryzuje</span
+                  >
+                  minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                  <span class="lg:block"
+                    >małoobsługowe, dostosowane do współczesnego trybu
+                    życia.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <button
+              class="flex items-center gap-2 transition-all border-solid hover:bg-lighterGreen active:scale-95 p-buttonHeroSecondary rounded-big border-one border-grayCustom"
+              id="letsGetCloserBtn"
+            >
+              <p
+                class="text-base font-normal text-center text-grayCustom font-inter"
+              >
+                Poznaj nas bliżej
+              </p>
+              <img
+                src="../assets/icons/vectorRight.svg"
+                alt="Vector right"
+                class="w-4 h-4"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    OUR PROJECTS
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+      <section class="bg-beige" id="ourProjects">
+        <div class="flex flex-col items-start gap-24 pt-big pb-11">
+          <div class="flex flex-col items-start gap-4 pl-6 xs:pl-40">
+            <p
+              class="text-xs font-normal font-inter text-green leading-sm tracking-xsMinus"
+            >
+              Realizacje
+            </p>
+            <h2
+              class="text-3xl font-medium lg:text-5xl text-blackText font-montserrat leading-bigLarge tracking-mdHugeMinus"
+            >
+              Nasze
+              <span class="italic font-medium font-inter"> projekty </span>
+            </h2>
+          </div>
+
+          <div class="relative w-full h-[1000px] overflow-hidden" id="projects">
+            <div
+              class="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-[#DCC1AB]"
+              id="gradient"
+            ></div>
+            <button
+              class="absolute bottom-0 z-20 flex items-center gap-2 right-2/4 translate-x-1/2 translate=y=1/2 rounded-big border-one border-blackText p-buttonHeroSecondary text-blackText mb-11 active:scale-95 hover:bg-lighterGreen transition-all"
+              id="btnRoll"
+            >
+              <p class="roll-text">Rozwiń</p>
+              <span>
+                <img
+                  src="../assets/icons/vectorDown.svg"
+                  alt="Vector down"
+                  class="roll-img"
+                />
+              </span>
+            </button>
+            <div
+              class="w-full gap-6 pb-2 space-y-6 lg:gap-10 lg:space-y-10 md:columns-2 lg:columns-3"
+            >
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img1.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img4.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img7.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img2.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img5.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img8.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img3.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img6.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+              <div class="overflow-hidden break-inside-avoid">
+                <img
+                  onclick="handleImageClick(event)"
+                  src="../assets/imgs/ourProjects/img9.jpg"
+                  alt="photo"
+                  class="w-full transition-all cursor-pointer hover:scale-105 project-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="fixed inset-0 z-40 items-center justify-center hidden bg-gray-600 bg-opacity-60"
+        id="masonryPopup"
+      >
+        <div
+          class="relative flex items-center justify-center bg-whiteCustom"
+          id="masonryPopupContent"
+        >
+          <img
+            src="../assets/imgs/ourProjects/img1.jpg"
+            alt="Image"
+            class="w-full opacity-85"
+            id="sliderGalleryImage"
+          />
+
+          <button
+            class="absolute p-2 rounded-full hover:bg-opacity-90 right-4 top-4 bg-whiteCustom bg-opacity-80 active:scale-95"
+            id="btnCloseGallery"
+          >
+            <img src="../assets/icons/closeGallery.svg" alt="Close" />
+          </button>
+
+          <button
+            class="absolute p-4 rounded-full hover:bg-opacity-90 bg-whiteCustom left-4 bg-opacity-80 active:scale-95"
+            id="btnLeftMasonry"
+          >
+            <img src="../assets/icons/arrowLeft.svg" alt="Arrow left" />
+          </button>
+          <button
+            class="absolute p-4 bg-white rounded-full hover:bg-opacity-90 right-4 bg-opacity-80 active:scale-95"
+            id="btnRightMasonry"
+          >
+            <img src="../assets/icons/arrowRight.svg" alt="Arrow right" />
+          </button>
+        </div>
+      </div>
+
+      <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    INSTAGRAM
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+      <section
+        class="flex justify-center py-smMed gap-moreThanSm bg-grayCustom"
+        id="instagramSection"
+      >
+        <div
+          class="flex flex-col md:flex-row xl:w-[1040px] px-20 py-20 md:px-medBig md:py-big gap-12 md:gap-16 items-start bg-green"
+        >
+          <h2
+            class="xl:w-[598.996px] text-grayCustom font-montserrat text-3xl sm:text-smBig font-normal leading-10 md:leading-big tracking-bigMinus"
+          >
+            Zostańmy w kontakcie!
+            <span class="block">
+              Znajdziesz nas na
+              <span class="italic font-medium font-inter tracking-mdPlus"
+                >Instagramie</span
+              >.
+            </span>
+          </h2>
+          <div class="flex flex-col xl:w-[157px] items-start gap-6">
+            <p
+              class="text-base font-normal leading-6 font-inter text-grayCustom tracking-smMinus"
+            >
+              Śledź nasze najnowsze realizacje!
+            </p>
+            <a
+              href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+              target="_blank"
+              class="flex items-center transition-all p-instaButton gap-moreThanSm rounded-big bg-grayCustom hover:bg-lighterGreen active:scale-95 text-green hover:text-white"
+            >
+              <p class="text-base font-normal leading-6 text-center font-inter">
+                Instagram
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    FOOTER
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+      <section
+        class="flex items-center justify-center bg-blackText"
+        id="footer"
+      >
+        <div class="w-[1040px] my-20 text-white flex flex-col gap-xxl">
+          <div class="flex flex-col gap-10 md:gap-x">
+            <div
+              class="flex flex-col items-center gap-2 md:gap-0 md:flex-row md:justify-between"
+            >
+              <a href="#" id="logoLink">
+                <img
+                  src="../assets/icons/giardDesign.svg"
+                  alt="Logo"
+                  class="max-w-[115px]"
+                />
+              </a>
+              <div class="flex flex-col items-center gap-6 md:flex-row">
+                <p
+                  class="text-base font-normal leading-6 text-grayCustom font-inter tracking-smMinus"
+                >
+                  Daj znać, co możemy dla Ciebie zrobić!
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                  target="_blank"
+                  class="flex items-center transition-all p-buttonHeroGreen gap-moreThanSm rounded-big bg-green text-grayCustom active:scale-95 hover:bg-lighterGreen"
+                >
+                  <p
+                    class="text-base font-normal leading-6 text-center text-grayCustom font-inter"
+                  >
+                    Skontaktuj się z nami
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="empty:border-b-one"></div>
+            <div
+              class="flex flex-col items-center gap-4 md:gap-0 md:flex-row md:justify-between"
+            >
+              <ul class="flex items-center gap-6 md:gap-12">
+                <li
+                  class="text-sm font-normal text-center text-grayCustom font-inter leading-smBig tracking-smMinus"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                    target="_blank"
+                    >Kontakt</a
+                  >
+                </li>
+                <li
+                  class="text-sm font-normal text-center text-grayCustom font-inter leading-smBig tracking-ssMinus"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                    target="_blank"
+                    >Instagram</a
+                  >
+                </li>
+                <li
+                  class="text-sm font-normal text-center text-grayCustom font-inter leading-smBig tracking-ssMinus"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </li>
+                <li
+                  class="text-sm font-normal text-center text-grayCustom font-inter leading-smBig tracking-ssMinus"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/mateusz-miszczak-a28571277/"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+              <div class="flex items-start gap-8 md:gap-12">
+                <a
+                  href="tel:+1000000000"
+                  class="text-sm font-normal text-grayCustom font-inter leading-smBig tracking-ssMinus"
+                  >000-000-000</a
+                >
+                <a
+                  href="mailto:giarddesign@kontakt.pl"
+                  class="text-sm font-normal text-grayCustom font-inter leading-smBig tracking-ssMinus"
+                  >giarddesign@kontakt.pl</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 md:gap-0 md:flex-row md:justify-between"
+            >
+              <p
+                class="text-base font-normal leading-6 text-grayCustom font-inter tracking-smMinus"
+              >
+                Prawa zastrzeżone © 2022
+              </p>
+              <div class="flex items-center gap-2 md:gap-4">
+                <p
+                  class="text-base font-normal leading-6 text-grayCustom font-inter tracking-smMinus"
+                >
+                  made by
+                </p>
+                <a href="https://adrespect.pl/" target="_blank">
+                  <img
+                    src="../assets/icons/logoAdRespect.svg"
+                    alt="adRespect Logo"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../src/script.js"></script>
+  </body>
+</html>
