@@ -3,6 +3,7 @@
 ## https://mateuszmiszczak.github.io/giardDesign/
 
 This website has been developed as part of the recruitment process on behalf of the adRespect agency.
+Done in 5 days.
 
 Guidelines:
 1. The project should utilize Bootstrap or Tailwind CSS (It's constructed using Tailwind CSS).
